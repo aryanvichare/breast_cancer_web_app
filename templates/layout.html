@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.1/css/bootstrap-slider.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.1/css/bootstrap-slider.min.css">
 
+    <link rel="stylesheet" href="static/css/cancer.css">
+
     <!-- Custom Fonts -->
     <link href="static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
@@ -45,8 +47,17 @@
     <header>
         <div class="container">
             <div class="intro-text">
-                <div class="intro-lead-in">Welcome To Our Studio!</div>
-                <div class="intro-heading">It's Nice To Meet You</div>
+              <div class="intro-heading">
+                <span class="highlight">
+                  Breast Cancer Classifier
+
+                </span>
+              </div>
+                <!-- <div class="intro-lead-in">
+                  <span class="highlight">
+                    using Neural Networks
+                  </span>
+                </div> -->
                 <a href="#about" class="btn btn-circle btn-lg page-scroll">
                 <i class="fa fa-arrow-down"></i>
                 </a>
@@ -61,23 +72,7 @@
 
 
 
-    <style>
-    #predict {
-      /*background-image: url('static/img/predictbk.png');
-      background-position: center;
-      background-repeat: inherit;*/
-      background-color: inherit;
-      color: black;
-      align-content: center;
-    }
-    #results {
-      height: 10px;
-      background-color: black;
-      background-image: url('static/img/predictbk.png');
-      color: white;
-    }
-    tr:hover {background-color: #f5f5f5}
-    </style>
+
 
     <!-- jQuery -->
     <script src="static/vendor/jquery/jquery.min.js"></script>
@@ -99,45 +94,7 @@
     <!-- Theme JavaScript -->
     <script src="static/js/agency.min.js"></script>
 
-    <script>
-    var slider = new Slider("#Clump_Thickness");
-    slider.on("slide", function(sliderValue) {
-    	document.getElementById("ex6SliderVal").textContent = sliderValue;
-    });
-    var slider1 = new Slider("#Uniformity_of_Cell_Size");
-    slider1.on("slide", function(sliderValue) {
-    	document.getElementById("ex6SliderVal1").textContent = sliderValue;
-    });
-    var slider2 = new Slider("#Uniformity_of_Cell_Shape");
-    slider2.on("slide", function(sliderValue) {
-    	document.getElementById("ex6SliderVal2").textContent = sliderValue;
-    });
-    var slider3 = new Slider("#Marginal_Adhesion");
-    slider3.on("slide", function(sliderValue) {
-    	document.getElementById("ex6SliderVal3").textContent = sliderValue;
-    });
-    var slider4 = new Slider("#Single_Epithelial_Cell_Size");
-    slider4.on("slide", function(sliderValue) {
-    	document.getElementById("ex6SliderVal4").textContent = sliderValue;
-    });
-    var slider5 = new Slider("#Bare_Nuclei");
-    slider5.on("slide", function(sliderValue) {
-    	document.getElementById("ex6SliderVal5").textContent = sliderValue;
-    });
-    var slider6 = new Slider("#Bland_Chromatin");
-    slider6.on("slide", function(sliderValue) {
-    	document.getElementById("ex6SliderVal6").textContent = sliderValue;
-    });
-    var slider7 = new Slider("#Normal_Nucleoli");
-    slider7.on("slide", function(sliderValue) {
-    	document.getElementById("ex6SliderVal7").textContent = sliderValue;
-    });
-    var slider8 = new Slider("#Mitoses");
-    slider8.on("slide", function(sliderValue) {
-    	document.getElementById("ex6SliderVal8").textContent = sliderValue;
-    });
-
-    </script>
+    <script src="static/js/cancer.js"></script>
 
 </body>
 
