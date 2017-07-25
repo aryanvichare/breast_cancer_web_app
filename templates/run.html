@@ -1,38 +1,136 @@
 {% extends 'layout.html' %}
-
+{% include 'includes/_navrun.html' %}
 {%block body%}
-
-<!-- Team Section -->
-<section id="team" class="bg-light-gray" align="center">
-    <div class="container text-center">
-        <div class="row">
-            <div class="col-lg-12 text-center">
-                <h2 class="section-heading">Results</h2>
-                <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 text-center">
-                <p class="large text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eaque, laboriosam veritatis, quos non quis ad perspiciatis, totam corporis ea, alias ut unde.</p>
-            </div>
-        </div>
+<!-- result Section -->
+<section id="results" class="bg-light-gray" align="center">
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading">Features</h2>
+        <h3 class="section-subheading">Lorem ipsum dolor sit amet consectetur.</h3>
+      </div>
     </div>
-</section>
-
-<section id="predict">
-  <div class="container">
-
-  <div class="row">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    {%for i in result%}
-    {{i}} <br>
-    {%endfor%}
   </div>
-</div>
-<div class="text-center">
-
-<a href="#" class="btn btn-default">Añadir entrada</a>
-</div>
 </section>
 
+<!-- Prediction section -->
+<section id="predict">
+  <div class="container text-center">
+    <div class="row">
+      <h2 class="section-heading">Breast cancer predictions</h2>
+      <br>
+      <!-- {%for i in result%}
+      {{i}}
+      {%endfor%} -->
+    </div>
+  </div>
+  <div class="text-center">
+  <br>
+
+  <div class="container text-center">
+    <table class="table-striped table-condensed table-hover	table table-responsive">
+      <tr>
+        
+        <th>
+          Clump Thickness
+        </th>
+        <th>
+          0&nbsp;<input id="Clump_Thickness" type="text" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="3"/>&nbsp;10
+        </th>
+        <th>
+          <span id="ex6CurrentSliderValLabel">&nbsp;<span id="ex6SliderVal">3</span></span>
+        </th>
+      </tr>
+      <tr>
+        <th>
+          Uniformity of Cell Size
+        </th>
+        <th>
+          0&nbsp;<input id="Uniformity_of_Cell_Size" type="text" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="3"/>&nbsp;10
+        </th>
+        <th>
+          <span id="ex6CurrentSliderValLabel">&nbsp;<span id="ex6SliderVal1">3</span></span>
+        </th>
+      </tr>
+      <tr>
+        <th>
+          Uniformity of Cell Shape
+        </th>
+        <th>
+          0&nbsp;<input id="Uniformity_of_Cell_Shape" type="text" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="3"/>&nbsp;10
+        </th>
+        <th>
+          <span id="ex6CurrentSliderValLabel">&nbsp;<span id="ex6SliderVal2">3</span></span>
+        </th>
+      </tr>
+      <tr>
+        <th>
+          Marginal Adhesion
+        </th>
+        <th>
+          0&nbsp;<input id="Marginal_Adhesion" type="text" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="3"/>&nbsp;10
+        </th>
+        <th>
+          <span id="ex6CurrentSliderValLabel">&nbsp;<span id="ex6SliderVal3">3</span></span>
+        </th>
+      </tr>
+      <tr>
+        <th>
+          Single Epithelial Cell Size
+        </th>
+        <th>
+          0&nbsp;<input id="Single_Epithelial_Cell_Size" type="text" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="3"/>&nbsp;10
+        </th>
+        <th>
+          <span id="ex6CurrentSliderValLabel">&nbsp;<span id="ex6SliderVal4">3</span></span>
+        </th>
+      </tr>
+      <tr>
+        <th>
+          Bare Nuclei
+        </th>
+        <th>
+          0&nbsp;<input id="Bare_Nuclei" type="text" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="3"/>&nbsp;10
+        </th>
+        <th>
+          <span id="ex6CurrentSliderValLabel">&nbsp;<span id="ex6SliderVal5">3</span></span>
+        </th>
+      </tr>
+      <tr>
+        <th>
+          Bland Chromatin
+        </th>
+        <th>
+          0&nbsp;<input id="Bland_Chromatin" type="text" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="3"/>&nbsp;10
+        </th>
+        <th>
+          <span id="ex6CurrentSliderValLabel">&nbsp;<span id="ex6SliderVal6">3</span></span>
+        </th>
+      </tr>
+      <tr>
+        <th>
+          Normal Nucleoli
+        </th>
+        <th>
+          0&nbsp;<input id="Normal_Nucleoli" type="text" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="3"/>&nbsp;10
+        </th>
+        <th>
+          <span id="ex6CurrentSliderValLabel">&nbsp;<span id="ex6SliderVal7">3</span></span>
+        </th>
+      </tr>
+      <tr>
+        <th>
+          Mitoses
+        </th>
+        <th>
+          0&nbsp;<input id="Mitoses" type="text" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="3"/>&nbsp;10
+        </th>
+        <th>
+          <span id="ex6CurrentSliderValLabel">&nbsp;<span id="ex6SliderVal8">3</span></span>
+        </th>
+      </tr>
+    </table>
+
+  </div>
+</section>
 {%endblock%}
