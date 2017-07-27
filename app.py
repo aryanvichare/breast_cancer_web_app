@@ -20,7 +20,10 @@ def worker():
     if request.method == 'POST':
         data = request.get_json(force=True)
         result = ''
-        print(data)
+        temo = list(data.items())
+        asd = temo[1][1]
+        # print(temo[1][1][2])
+        print(asd[2])
         return result
 
 
