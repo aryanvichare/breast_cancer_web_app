@@ -1,15 +1,16 @@
 import pickle
 import numpy as np
 
-filename = 'Final_model.sav'
 
-mlp = pickle.load(open(filename,'rb'))
+def prediction(vector):
 
-test = [1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 3.0, 1.0, 1.0]
-test = np.array(test)
+  filename = 'Final_model.sav'
 
-result = {2:'benign',4:'malign'}
+  mlp = pickle.load(open(filename,'rb'))
+  test = np.array(vector)
+  #test1 = np.array()
 
-pred = int(mlp.predict(test.reshape(1,-1)))
+  result = {2:'benign',4:'malign'}
 
-print(result[pred])
+  pred = int(mlp.predict(test.reshape(1,-1)))
+  return result[pred]

@@ -17,8 +17,14 @@
 <section id="predict">
   <div class="container text-center">
     <div class="row">
+
       <h2 class="section-heading">Breast Cancer Diagnostic</h2>
       <br>
+
+      <h>
+        {{ msg | safe}}
+        asd
+      </h>
       <!-- {%for i in result%}
       {{i}}
       {%endfor%} -->
@@ -144,8 +150,6 @@
     <div class="text-right">
       <button id="ClickMe" type="button" name="button" class="btn btn-default btn-lg">PREDICT</button>
     </div>
-      <div id="result" style="border: 1px solid gray;margin: 45px;height: auto;width: auto;float:left; padding: 1%;display:none;">
-</div>
 
   </div>
 </section>

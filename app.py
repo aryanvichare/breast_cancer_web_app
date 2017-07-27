@@ -1,4 +1,5 @@
-from flask import Flask, url_for, render_template, redirect, request, json,jsonify
+from flask import Flask, url_for, render_template, redirect, request, flash
+from predict import prediction
 
 DEBUG = True
 app = Flask(__name__)
@@ -10,10 +11,7 @@ def index():
 
 @app.route("/run")
 def run():
-    a = [i*2 for i in range(0,10)]
-    b = [i for i in range(1,20)]
-    result = a+b
-    return render_template('run.html',result=result)
+    return render_template('run.html')
 
 @app.route('/receiver', methods = ['POST'])
 def worker():
@@ -21,20 +19,24 @@ def worker():
         data = request.get_json(force=True)
         result = ''
         data = dict(data.items())
-        print(type(data))
+        SIZE_TABLE = int(data['count'])
         data = list(data.values())
         _keys = list(data[0][1].keys())
         print("====")
         print(_keys)
-        print(data[0][1][_keys[1]])
-        print(data[0][1][_keys[2]])
-        # print(data[0][2])
-        # print(data[0][3])
-        # temo = list(data.items())
-        # asd = temo[1][1]
-        # print(temo[1][1][2])
-        # print(asd[2])
-        return result
+        print("######")
+        vector_attributes = list()
+        for index in range(1,SIZE_TABLE):
+            print(data[0][index][_keys[1]])
+            vector_attributes.append(int(data[0][index][_keys[1]]))
+        print(vector_attributes)
+        print("PREDICT")
+        PRED = prediction(vector_attributes)
+        print(PRED)
+        # return result
+        flash("WORKER","success")
+        return render_template('run.html',msg=str(PRED))
+    return render_template('run.html')
 
 
 if __name__ == '__main__':
