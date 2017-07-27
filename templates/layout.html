@@ -67,6 +67,9 @@
     {% include 'includes/_footer.html' %}
     {%else%}
     {%block body%}{%endblock%}
+    <div id="result">
+
+    </div>
     {%endif%}
 
 
@@ -108,12 +111,17 @@
 
     function doWork(tables) {
     	// ajax the JSON to the server
-    	$.post("receiver", tables, function(){
-
+    	$.post("receiver", tables, function(response){
+        $('#result').html(response);
     	});
     	// stop link reloading the page
      event.preventDefault();
     }
+
+    // $.get("layout", function (response) {
+    // $('#result').html(response);
+    // });
+
     </script>
 
 </body>

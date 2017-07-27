@@ -22,9 +22,6 @@ def worker():
         SIZE_TABLE = int(data['count'])
         data = list(data.values())
         _keys = list(data[0][1].keys())
-        print("====")
-        print(_keys)
-        print("######")
         vector_attributes = list()
         for index in range(1,SIZE_TABLE):
             print(data[0][index][_keys[1]])
@@ -34,9 +31,8 @@ def worker():
         PRED = prediction(vector_attributes)
         print(PRED)
         # return result
-        flash("WORKER","success")
-        return render_template('run.html',msg=str(PRED))
-    return render_template('run.html')
+        # flash("WORKER"+PRED,"success")
+        return PRED
 
 
 if __name__ == '__main__':
