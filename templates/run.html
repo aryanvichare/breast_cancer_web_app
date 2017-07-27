@@ -2,10 +2,10 @@
 {% include 'includes/_navrun.html' %}
 {%block body%}
 <!-- result Section -->
-<section id="results" class="bg-light-gray" align="center">
+<section id="results" class="bg-light-gray">
   <div class="container text-center">
     <div class="row">
-      <div class="col-lg-12 text-center">
+      <div >
         <h2 class="section-heading">Features</h2>
         <h3 class="section-subheading">Lorem ipsum dolor sit amet consectetur.</h3>
       </div>
@@ -17,17 +17,16 @@
 <section id="predict">
   <div class="container text-center">
     <div class="row">
-      <h2 class="section-heading">Breast cancer predictions</h2>
+      <h2 class="section-heading">Breast Cancer Diagnostic</h2>
       <br>
       <!-- {%for i in result%}
       {{i}}
       {%endfor%} -->
     </div>
   </div>
-  <div class="text-center">
   <br>
 
-  <div class="container text-center">
+  <div class="container">
     <table id="attributes" class="table-striped table-condensed table-hover	table display">
       <tr>
         <thead class="thead-default">
@@ -35,8 +34,8 @@
             <th>
               Attributes
             </th>
-            <th>
-              Range
+            <th class="text-left">
+              Range [0,10]
             </th>
             <th >
               Value
@@ -47,10 +46,10 @@
           Clump Thickness
         </td>
         <td>
-          0&nbsp;<input id="Clump_Thickness" data-slider-tooltip="hide" type="text" data-slider-tooltip="hide" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="3"/>&nbsp;10
+          <input id="Clump_Thickness" data-slider-tooltip="hide" type="text" data-slider-tooltip="hide" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="5"/>
         </td>
         <td>
-          <span id="ex6CurrentSliderValLabel">&nbsp;<span id="ex6SliderVal">3</span></span>
+          <span id="ex6CurrentSliderValLabel">&nbsp;<span id="ex6SliderVal">5</span></span>
         </td>
       </tr>
       <tr>
@@ -58,10 +57,10 @@
           Uniformity of Cell Size
         </td>
         <td>
-          0&nbsp;<input id="Uniformity_of_Cell_Size" type="text" data-slider-tooltip="hide" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="3"/>&nbsp;10
+          <input id="Uniformity_of_Cell_Size" type="text" data-slider-tooltip="hide" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="5"/>
         </td>
         <td>
-          <span id="ex6CurrentSliderValLabel">&nbsp;<span id="ex6SliderVal1">3</span></span>
+          <span id="ex6CurrentSliderValLabel">&nbsp;<span id="ex6SliderVal1">5</span></span>
         </td>
       </tr>
       <tr>
@@ -69,10 +68,10 @@
           Uniformity of Cell Shape
         </td>
         <td>
-          0&nbsp;<input id="Uniformity_of_Cell_Shape" type="text" data-slider-tooltip="hide" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="3"/>&nbsp;10
+          <input id="Uniformity_of_Cell_Shape" type="text" data-slider-tooltip="hide" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="5"/>
         </td>
         <td>
-          <span id="ex6CurrentSliderValLabel">&nbsp;<span id="ex6SliderVal2">3</span></span>
+          <span id="ex6CurrentSliderValLabel">&nbsp;<span id="ex6SliderVal2">5</span></span>
         </td>
       </tr>
       <tr>
@@ -80,10 +79,10 @@
           Marginal Adhesion
         </td>
         <td>
-          0&nbsp;<input id="Marginal_Adhesion" type="text" data-slider-tooltip="hide" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="3"/>&nbsp;10
+          <input id="Marginal_Adhesion" type="text" data-slider-tooltip="hide" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="5"/>
         </td>
         <td>
-          <span id="ex6CurrentSliderValLabel">&nbsp;<span id="ex6SliderVal3">3</span></span>
+          <span id="ex6CurrentSliderValLabel">&nbsp;<span id="ex6SliderVal5">5</span></span>
         </td>
       </tr>
       <tr>
@@ -91,10 +90,10 @@
           Single Epithelial Cell Size
         </td>
         <td>
-          0&nbsp;<input id="Single_Epithelial_Cell_Size" type="text" data-slider-tooltip="hide" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="3"/>&nbsp;10
+          <input id="Single_Epithelial_Cell_Size" type="text" data-slider-tooltip="hide" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="5"/>
         </td>
         <td>
-          <span id="ex6CurrentSliderValLabel">&nbsp;<span id="ex6SliderVal4">3</span></span>
+          <span id="ex6CurrentSliderValLabel">&nbsp;<span id="ex6SliderVal4">5</span></span>
         </td>
       </tr>
       <tr>
@@ -102,10 +101,10 @@
           Bare Nuclei
         </td>
         <td>
-          0&nbsp;<input id="Bare_Nuclei" type="text" data-slider-tooltip="hide" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="3"/>&nbsp;10
+          <input id="Bare_Nuclei" type="text" data-slider-tooltip="hide" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="5"/>
         </td>
         <td>
-          <span id="ex6CurrentSliderValLabel">&nbsp;<span id="ex6SliderVal5">3</span></span>
+          <span id="ex6CurrentSliderValLabel">&nbsp;<span id="ex6SliderVal5">5</span></span>
         </td>
       </tr>
       <tr>
@@ -113,10 +112,10 @@
           Bland Chromatin
         </td>
         <td>
-          0&nbsp;<input id="Bland_Chromatin" type="text" data-slider-tooltip="hide" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="3"/>&nbsp;10
+          <input id="Bland_Chromatin" type="text" data-slider-tooltip="hide" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="5"/>
         </td>
         <td>
-          <span id="ex6CurrentSliderValLabel">&nbsp;<span id="ex6SliderVal6">3</span></span>
+          <span id="ex6CurrentSliderValLabel">&nbsp;<span id="ex6SliderVal6">5</span></span>
         </td>
       </tr>
       <tr>
@@ -124,10 +123,10 @@
           Normal Nucleoli
         </td>
         <td>
-          0&nbsp;<input id="Normal_Nucleoli" type="text" data-slider-tooltip="hide" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="3"/>&nbsp;10
+          <input id="Normal_Nucleoli" type="text" data-slider-tooltip="hide" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="5"/>
         </td>
         <td>
-          <span id="ex6CurrentSliderValLabel">&nbsp;<span id="ex6SliderVal7">3</span></span>
+          <span id="ex6CurrentSliderValLabel">&nbsp;<span id="ex6SliderVal7">5</span></span>
         </td>
       </tr>
       <tr>
@@ -135,13 +134,18 @@
           Mitoses
         </td>
         <td>
-          0&nbsp;<input id="Mitoses" type="text" data-slider-tooltip="hide" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="3"/>&nbsp;10
+          <input id="Mitoses" type="text" data-slider-tooltip="hide" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="5"/>
         </td>
         <td>
-          <span id="ex6CurrentSliderValLabel">&nbsp;<span id="ex6SliderVal8">3</span></span>
+          <span id="ex6CurrentSliderValLabel">&nbsp;<span value="5" id="ex6SliderVal8">5</span></span>
         </td>
       </tr>
     </table>
+    <div class="text-right">
+      <button id="ClickMe" type="button" name="button" class="btn btn-default btn-lg">PREDICT</button>
+    </div>
+      <div id="result" style="border: 1px solid gray;margin: 45px;height: auto;width: auto;float:left; padding: 1%;display:none;">
+</div>
 
   </div>
 </section>

@@ -1,5 +1,4 @@
-from flask import Flask, url_for, render_template, redirect
-
+from flask import Flask, url_for, render_template, redirect, request, json,jsonify
 
 DEBUG = True
 app = Flask(__name__)
@@ -16,9 +15,17 @@ def run():
     result = a+b
     return render_template('run.html',result=result)
 
+@app.route('/receiver', methods = ['POST'])
+def worker():
+    if request.method == 'POST':
+        data = request.get_json(force=True)
+        result = ''
+        print(data)
+        return result
+
 
 if __name__ == '__main__':
     app.debug = DEBUG
     app.secret_key = 'qwerty12345'
     #host,pt="192.168.10.41",port=1234
-    app.run()
+    app.run("0.0.0.0", 5010)

@@ -12,6 +12,7 @@ span.highlight {
 }
 #results {
   height: 10px;
+  width: inherit;
   background-color: black;
   background-image: url('../img/predictbk.png');
   color: white;

@@ -36,16 +36,10 @@ slider8.on("slide", function(sliderValue) {
 });
 
 
-function getValues() {
-  var table, tr;
-  var td = [];
-  table = document.getElementById('attributes');
-  tr = table.getElementsByTagName('tr');
-  for (var i = 0; i < tr.length; i++) {
-    alert(document.getElementById("attributes").rows[i].cells[2].innerHTML);
-  }
-  return td;
-}
-
-
-var text = "The temperature is  Celsius";
+// $(document).ready(function(){
+//       $('#ClickMe').click(function(){
+// 	        $('#result').append(JSON.stringify(makeJsonFromTable('attributes')))
+// 			$('#result').show()
+// 			alert(JSON.stringify(makeJsonFromTable('attributes')))
+// 	  })
+//   });
