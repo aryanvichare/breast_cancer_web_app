@@ -62,12 +62,12 @@ function doWork(tables) {
     prediction = response;
     if (prediction == "malign") {
       swal("Likely to be",
-        response.toUpperCase(),
+        prediction.toUpperCase(),
         "warning"
       )
     } else {
       swal("Likely to be",
-        response.toUpperCase(),
+        prediction.toUpperCase(),
         "success"
       )
     }
