@@ -3,7 +3,8 @@ Breast cancer classification - Neural nets
 
 
 # Dependencies
-* numpy
-* pickle
-* scikit-learn
-* pandas
+* Numpy
+* Pickle
+* Scikit-learn
+* Pandas
+* Flask
