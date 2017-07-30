@@ -57,21 +57,21 @@ window.onload = function() {
 // doWork evaluates attributes and catch the return value from predict.py
 function doWork(tables) {
   // ajax the JSON to the server
-  $.post("receiver", tables, function(response){
-      // $('#result').html(response);
-      prediction = response;
-      if (prediction == "malign") {
-        swal("Likely to be",
-              response.toUpperCase(),
-              "warning"
-        )
-      } else {
-        swal("Likely to be",
-              response.toUpperCase(),
-              "success"
-        )
-      }
-    });
+  $.post("receiver", tables, function(response) {
+    // $('#result').html(response);
+    prediction = response;
+    if (prediction == "malign") {
+      swal("Likely to be",
+        response.toUpperCase(),
+        "warning"
+      )
+    } else {
+      swal("Likely to be",
+        response.toUpperCase(),
+        "success"
+      )
+    }
+  });
   // swal({
   //     title: "Evaluating attributes",
   //     // text: "Please, check ",
@@ -84,10 +84,10 @@ function doWork(tables) {
   //     $.post("receiver", tables, function(response) {
   //       $('#result').html(response);
   //       if (response == "malign") {
-          // swal("Likely to be",
-          //       response,
-          //       "error"
-          // );
+  // swal("Likely to be",
+  //       response,
+  //       "error"
+  // );
   //       }
   //     });
   //   });

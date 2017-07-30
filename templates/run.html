@@ -11,15 +11,11 @@
       </div>
     </div>
   </div>
-
 </section>
-
 <!-- Prediction section -->
-
 <section id="predict">
   <div class="container text-center">
     <div class="row">
-
       <h2 class="section-heading">Breast Cancer Diagnostic</h2>
       <br>
       <!-- result -->
@@ -27,32 +23,31 @@
     </div>
   </div>
   <br>
-
   <div class="container">
     <table id="attributes" class="table-striped table-condensed table-hover	table display">
       <tr>
-        <thead class="thead-default">
-          <tr>
-            <th>
-              Attributes
-            </th>
-            <th class="text-left">
-              Range [0,10]
-            </th>
-            <th >
-              Value
-            </th>
-          </tr>
-        </thead>
-        <td>
-          Clump Thickness
-        </td>
-        <td>
-          <input id="Clump_Thickness" type="text" data-slider-tooltip="hide" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="5"/>
-        </td>
-        <td>
-          <span id="ex6CurrentSliderValLabel">&nbsp;<span id="ex6SliderVal">5</span></span>
-        </td>
+      <thead class="thead-default">
+        <tr>
+          <th>
+            Attributes
+          </th>
+          <th class="text-left">
+            Range [0,10]
+          </th>
+          <th >
+            Value
+          </th>
+        </tr>
+      </thead>
+      <td>
+        Clump Thickness
+      </td>
+      <td>
+        <input id="Clump_Thickness" type="text" data-slider-tooltip="hide" data-slider-min="0" data-slider-max="10" data-slider-step="1" data-slider-value="5"/>
+      </td>
+      <td>
+        <span id="ex6CurrentSliderValLabel">&nbsp;<span id="ex6SliderVal">5</span></span>
+      </td>
       </tr>
       <tr>
         <td>
@@ -146,9 +141,6 @@
     <div class="text-right">
       <button id="ClickMe" type="button" name="button" class="btn btn-default btn-lg">PREDICT</button>
     </div>
-
-
   </div>
 </section>
-
 {%endblock%}
