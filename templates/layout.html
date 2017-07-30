@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/9.8.1/css/bootstrap-slider.min.css">
 
     <link rel="stylesheet" href="static/css/cancer.css">
+    <!-- bower sweetalert -->
+    <link rel="stylesheet" href="static/bower_components/sweetalert/dist/sweetalert.css">
 
     <!-- Custom Fonts -->
     <link href="static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -67,13 +69,14 @@
     {% include 'includes/_footer.html' %}
     {%else%}
     {%block body%}{%endblock%}
-    
+
     {%endif%}
 
 
 
 
-
+    <!-- Bower sweet-alert -->
+    <script src="static/bower_components/sweetalert/dist/sweetalert.min.js"></script>
     <!-- jQuery -->
     <!-- <script src="static/vendor/jquery/jquery.min.js"></script> -->
     <script src="static/vendor/jquery/jquery.js"></script>

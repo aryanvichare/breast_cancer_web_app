@@ -57,6 +57,7 @@ function doWork(tables) {
   // ajax the JSON to the server
   $.post("receiver", tables, function(response){
     $('#result').html(response);
+    swal("Likely to be" ,response);
   });
   // stop link reloading the page
  event.preventDefault();
