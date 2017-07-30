@@ -8,7 +8,6 @@ def prediction(vector):
 
   mlp = pickle.load(open(filename,'rb'))
   test = np.array(vector)
-  #test1 = np.array()
 
   result = {2:'benign',4:'malign'}
 
