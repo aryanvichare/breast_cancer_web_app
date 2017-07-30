@@ -45,6 +45,7 @@ slider8.on("slide", function(sliderValue) {
 //   });
 
 // setup some JSON to use
+// Convert table to JSON and pass it to predict.py for evaluation
 window.onload = function() {
   // setup the button click
   document.getElementById("ClickMe").onclick = function() {
@@ -53,12 +54,44 @@ window.onload = function() {
   };
 }
 
+// doWork evaluates attributes and catch the return value from predict.py
 function doWork(tables) {
   // ajax the JSON to the server
   $.post("receiver", tables, function(response){
-    $('#result').html(response);
-    swal("Likely to be" ,response);
-  });
+      // $('#result').html(response);
+      prediction = response;
+      if (prediction == "malign") {
+        swal("Likely to be",
+              response.toUpperCase(),
+              "warning"
+        )
+      } else {
+        swal("Likely to be",
+              response.toUpperCase(),
+              "success"
+        )
+      }
+    });
+  // swal({
+  //     title: "Evaluating attributes",
+  //     // text: "Please, check ",
+  //     type: "info",
+  //     showCancelButton: true,
+  //     closeOnConfirm: false,
+  //     showLoaderOnConfirm: true,
+  //   },
+  //   function(response) {
+  //     $.post("receiver", tables, function(response) {
+  //       $('#result').html(response);
+  //       if (response == "malign") {
+          // swal("Likely to be",
+          //       response,
+          //       "error"
+          // );
+  //       }
+  //     });
+  //   });
+
   // stop link reloading the page
- event.preventDefault();
+  event.preventDefault();
 }
