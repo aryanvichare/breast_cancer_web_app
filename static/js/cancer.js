@@ -43,3 +43,21 @@ slider8.on("slide", function(sliderValue) {
 // 			alert(JSON.stringify(makeJsonFromTable('attributes')))
 // 	  })
 //   });
+
+// setup some JSON to use
+window.onload = function() {
+  // setup the button click
+  document.getElementById("ClickMe").onclick = function() {
+    JSON.stringify(makeJsonFromTable('attributes'))
+    doWork(JSON.stringify(makeJsonFromTable('attributes')))
+  };
+}
+
+function doWork(tables) {
+  // ajax the JSON to the server
+  $.post("receiver", tables, function(response){
+    $('#result').html(response);
+  });
+  // stop link reloading the page
+ event.preventDefault();
+}

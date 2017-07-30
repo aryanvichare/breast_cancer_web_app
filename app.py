@@ -31,8 +31,11 @@ def worker():
         PRED = prediction(vector_attributes)
         print(PRED)
         # return result
-        # flash("WORKER"+PRED,"success")
-        return PRED
+        if PRED[0] == 'm':
+            flash('Likely to be ' + PRED.upper(),"danger")
+        elif PRED[0] == 'b':
+            flash('Likely to be ' + PRED.upper(),"success")
+        return redirect(url_for('run'),PRED)
 
 
 if __name__ == '__main__':
